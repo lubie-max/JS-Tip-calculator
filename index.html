@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+    <div class="wrapper">
+        <div class="container" id="top-container">
+
+            <div class="title">
+                Bill total
+            </div>
+            <div class="input-container">
+                <span>Rs. &nbsp;</span>
+                <input type="text" id="total-bill" placeholder="0.00" onkeyup="calculateBill()">
+
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="title">
+                Tip
+            </div>
+            <div class="input-container">
+                <span>% &nbsp; &nbsp;</span>
+                <input type="text" id="tip-input" placeholder="0.00" onkeyup="calculateBill()">
+
+            </div>
+        </div>
+
+        <div class="container " id="bottom-container">
+
+            <div class="split-container">
+                <div class="title">
+                    People
+                </div>
+
+                <div class="controls">
+                    <span class="button-container">
+
+                        <button class="split-button" onclick="increasePeople()">
+                            <span class="buttonText">+</span>
+                        </button>
+                    </span>
+               
+                    <span class="split-amount" id="noOfPeople" style="margin:10px;">
+                       1 
+                    </span>
+  
+                    <span class="button-container">
+                        <button class="split-button" onclick="decreasePeople()">
+                            <span class="buttonText"> - </span>
+                        </button>
+                    </span>
+
+                </div>
+            </div>
+
+
+            <div class="total-container">
+                <div class="title">Total per Person</div>
+                
+                <div class="total"  > Rs. &nbsp;<label for="div" id="total"> 0.00 </label></div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
